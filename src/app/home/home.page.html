@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="bg-image">
+    <div class="overlays">
+        <div class="logos">
+            <img src="../../assets/r4.png">
+         </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="box">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+     <div class="container">
+        <div class="top-header">
+           <header>Login</header>
+        </div>
+    <form [formGroup]="form" (submit)="login(form)">
+        <div class="input-field">
+            <ion-input  formControlName="Username" class="custom" type="email"  placeholder="Your username"><ion-icon name="mail-outline"></ion-icon></ion-input>
+        </div>
+
+        <div class="input-field">
+        <ion-input   formControlName="Password" class="custom" type="password"  placeholder="Password"><ion-icon name="lock-closed-outline"></ion-icon></ion-input>
+        </div>
+
+        <div class="input-field">
+        <ion-button color="light" shape="round" type="submit" >Login</ion-button>
+        </div>
+
+        <div class="bottom">
+            <a routerLink="/nothing" class="forgot-password-link">Forgot Password?</a>
+        </div>
+    </form>
+
+
+    </div>
+</div>
+
+</div>
+
 </ion-content>

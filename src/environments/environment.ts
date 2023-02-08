@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // addAgent:'',
+  // loginUrl:'',
+  // displayUrl:'http://localhost:3000/agents',
+  // cargoAdd:'',
+  // disCargo:''
 };
 
 /*
