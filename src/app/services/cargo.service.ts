@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
 })
 export class CargoService {
 
-  private addCargo = 'https://nodejs-acli.onrender.com/agents/cargoDetails';
-  private cargoDetails = 'https://nodejs-acli.onrender.com/agents/cargos';
+  private addCargo = 'https://nodejs-acli.onrender.com/cargos/cargoDetails';
+  private cargoDetails = 'https://nodejs-acli.onrender.com/cargos';
 
   constructor(private http: HttpClient) { }
 
@@ -21,8 +21,18 @@ export class CargoService {
     return this.http.get(disUrl);
   }
 
+  check(id:any) {
+    let url2 = 'https://nodejs-acli.onrender.com/cargos';
+    return this.http.get(url2 + '/' + id);
+  }
+
+
+  update(data:any){
+     return this.http.put(this.cargoDetails,data);
+  }
+
   deletes(id:string){
-    let url4 = 'http://localhost:3000/cargos';
+    let url4 = 'https://nodejs-acli.onrender.com/cargos';
      return this.http.delete(url4+'/'+id);
   }
 }

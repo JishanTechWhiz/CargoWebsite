@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -153,7 +153,7 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background-color: #0d0d0d;
     --ion-background-color-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;

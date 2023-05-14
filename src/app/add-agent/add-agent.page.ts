@@ -30,7 +30,6 @@ export class AddAgentPage{
     State : new FormControl('',[Validators.required,Validators.maxLength(10),]),
     City : new FormControl('',[Validators.required,Validators.maxLength(10),]),
     officeAddress : new FormControl('',[Validators.required,Validators.maxLength(10),]),
-    To : new FormControl('',[Validators.required,Validators.maxLength(10),]),
    });
 
    async add(form: FormGroup) {
@@ -72,12 +71,11 @@ export class AddAgentPage{
         State: form.value.State,
         City: form.value.City,
         officeAddress: form.value.officeAddress,
-        To: form.value.To,
-      };
+       };
 
       this.service.create(dataJson).subscribe(async res=>{
       console.log(res);
-      this.router.navigateByUrl('/agent-dash');
+      this.router.navigateByUrl('/admin-dash');
       const toast = await this.toastCtrl.create({
         message: 'Agent Added Succesfully!',
         duration: 1500,

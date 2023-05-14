@@ -63,6 +63,30 @@ const routes: Routes = [
     path: 'nothing',
     loadChildren: () => import('./nothing/nothing.module').then( m => m.NothingPageModule)
   },
+  {
+    path: 'user-update/:id',
+    loadChildren: () => import('./updates/user-update/user-update.module').then( m => m.UserUpdatePageModule)
+  },
+  {
+    path: 'cargo-update/:id',
+    loadChildren: () => import('./updates/cargo-update/cargo-update.module').then( m => m.CargoUpdatePageModule)
+  },
+  {
+    path: 'agent-update/:id',
+    loadChildren: () => import('./updates/agent-update/agent-update.module').then( m => m.AgentUpdatePageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./updates/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'update-password',
+    loadChildren: () => import('./updates/update-password/update-password.module').then( m => m.UpdatePasswordPageModule)
+  },
+  {
+    path: 'my-payment',
+    loadChildren: () => import('./my-payment/my-payment.module').then( m => m.MyPaymentPageModule)
+  },
 ];
 
 @NgModule({

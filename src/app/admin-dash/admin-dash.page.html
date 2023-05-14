@@ -9,7 +9,7 @@
           <ion-label class="welcome">Welcome</ion-label>
           <ion-label class="username">Admin</ion-label>
       </div>
-      <div class="user_back" [style.backgroundImage]="'url(assets/2473119.jpg)'">
+      <div class="user_back" [style.backgroundImage]="'url(assets/iron2.jpg)'">
       </div>
   </div>
 
@@ -51,19 +51,22 @@
       </ion-row>
 
       <ion-row>
-        <ion-col><ion-card  class="mycard" routerLink="/display">
+        <ion-col>
+          <ion-card  class="mycard">
+            <ion-card-header>
+              <ion-card-title class="mytitle" (click)="presentAlert()"><ion-icon name="log-out-outline"></ion-icon></ion-card-title>
+              <ion-card-subtitle class="mysub">Logout</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+          <!-- <ion-card  class="mycard" routerLink="/display">
           <ion-card-header>
             <ion-card-title class="mytitle"><ion-icon name="happy-outline"></ion-icon></ion-card-title>
             <ion-card-subtitle class="mysub">View Feedback</ion-card-subtitle>
           </ion-card-header>
-        </ion-card></ion-col>
+        </ion-card> -->
+      </ion-col>
 
-        <ion-col><ion-card  class="mycard">
-          <ion-card-header>
-            <ion-card-title class="mytitle"><ion-icon name="log-out-outline"></ion-icon></ion-card-title>
-            <ion-card-subtitle class="mysub">Logout</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card></ion-col>
+        <ion-col></ion-col>
       </ion-row>
     </ion-grid>
   </div>

@@ -51,6 +51,8 @@ export class DisplayCargoPage implements OnInit {
                   icon: 'globe'
                 });
 
+                this.ngOnInit();
+
                 await toast.present();
             });
           },

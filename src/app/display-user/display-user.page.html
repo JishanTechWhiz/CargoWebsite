@@ -42,7 +42,8 @@
 
                 <div class="col-md-2 d-flex justify-content-center align-items-center">
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-success">Edit</button>
+                    <button type="button" class="btn btn-outline-success"
+                      routerLink="/user-update/{{data._id}}">Edit</button>
                     <button type="button" class="btn btn-outline-danger" (click)="deleteUser(data._id)">Delete</button>
                   </div>
 
@@ -71,7 +72,7 @@
                       </tr>
                       <tr>
                         <td class="jis">Date of Birth</td>
-                        <td>None</td>
+                        <td>{{data.DOB}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -93,7 +94,7 @@
                       </tr>
                       <tr>
                         <td class="jis">Gender</td>
-                        <td>LOL</td>
+                        <td>{{data.Gender}}</td>
                       </tr>
                     </tbody>
                   </table>

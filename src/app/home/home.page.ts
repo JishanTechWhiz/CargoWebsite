@@ -27,6 +27,8 @@ export class HomePage {
     Password: new FormControl('', [Validators.required, Validators.maxLength(10),]),
   });
 
+
+
   async login(form: FormGroup) {
     const headers = {
       enctype: 'multipart/form-data;',
@@ -48,6 +50,21 @@ export class HomePage {
     else if(form.value.Username === 'Admin' && form.value.Password === 'Admin@123')
     {
       this.router.navigateByUrl('/admin-dash');
+      const toast = await this.toastCrtl.create({
+        message: 'SuccessFully Login!',
+        duration: 1500,
+        icon: 'checkmark-circle-outline'
+      });
+      form.reset();
+      await toast.present();
+      async (err: { error: { error: any; }; })=>{
+        const toast = await this.toastCrtl.create({
+          message: err.error.error,
+          duration: 1500,
+          icon: 'alert'
+        });
+        await toast.present();
+      };
     }
     else {
       const formData = new FormData();
@@ -73,7 +90,7 @@ export class HomePage {
         duration: 1500,
         icon: 'checkmark-circle-outline'
       });
-
+      form.reset();
       await toast.present();
       },async err=>{
         const toast = await this.toastCrtl.create({

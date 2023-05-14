@@ -17,6 +17,7 @@ export class DisplayAgentPage implements OnInit {
     private toasts:ToastController
     ) { }
 
+
   ngOnInit() {
     this.displayData();
   }
@@ -53,6 +54,8 @@ export class DisplayAgentPage implements OnInit {
                   duration: 1500,
                   icon: 'globe'
                 });
+
+                this.ngOnInit();
 
                 await toast.present();
             });

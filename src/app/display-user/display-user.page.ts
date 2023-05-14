@@ -51,6 +51,8 @@ export class DisplayUserPage implements OnInit {
                   icon: 'globe'
                 });
 
+                this.ngOnInit();
+
                 await toast.present();
             });
           },

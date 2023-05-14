@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CompanyService {
 
-  private addCompany = 'https://nodejs-acli.onrender.com/agents/addCompany';
-  private displayCompany = 'https://nodejs-acli.onrender.com/agents/companies';
+  private addCompany = 'https://nodejs-acli.onrender.com/companies/addCompany';
+  private displayCompany = 'https://nodejs-acli.onrender.com/companies';
 
   constructor(private http: HttpClient) { }
 
